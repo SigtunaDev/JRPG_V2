@@ -12,13 +12,13 @@ import jv2.sql.SQLite;
 
 public class Main extends JavaPlugin {
 
-	//ÀRºAMainÃş§OÅÜ¼Æ¡Gplugin
+	//éœæ…‹Mainé¡åˆ¥è®Šæ•¸ï¼šplugin
 	public static Main plugin;
 
-	//¸ê®Æ®w
+	//è³‡æ–™åº«
 	private Database db;
 	
-	//³]©wÀÉ¡Gconfig.yml
+	//è¨­å®šæª”ï¼šconfig.yml
 	private File config;
 	private FileConfiguration fc;
 
@@ -35,14 +35,14 @@ public class Main extends JavaPlugin {
 		
 	}
 
-	//¦^¶Ç¸ê®Æ®w
+	//å›å‚³è³‡æ–™åº«
 	public Database getDB() {
 
 		return this.db;
 
 	}
 	
-	//µù¥UÀÉ®×
+	//è¨»å†Šæª”æ¡ˆ
 	public void register_file() {
 		
 		config = new File(this.getDataFolder(), "/config.yml");
@@ -50,17 +50,17 @@ public class Main extends JavaPlugin {
 		
 	}
 	
-	//ªì©l¤Æ¸ê®Æ®w
+	//åˆå§‹åŒ–è³‡æ–™åº«
 	public void database_init() {
 		
 		this.db = new SQLite(this);
 		this.db.load();
 
-		this.getLogger().info("ªì©l¤Æ¸ê®Æ®w¦¨¥\!");
+		this.getLogger().info("åˆå§‹åŒ–è³‡æ–™åº«æˆåŠŸ!");
 		
 	}
 
-	//½T»{config.yml¬O§_¦s¦b¡A¦pªG¤£¦s¦b´N¥Í¦¨
+	//ç¢ºèªconfig.ymlæ˜¯å¦å­˜åœ¨ï¼Œå¦‚æœä¸å­˜åœ¨å°±ç”Ÿæˆ
 	public void check_exist() {
 
 		try {
@@ -71,7 +71,7 @@ public class Main extends JavaPlugin {
 				
 				fc.save(config);
 				
-				this.getLogger().info("½T»{ÀÉ®×¬O§_¦s¦b¡G¤£¦s¦b¡A¤w·s¼W¡C");
+				this.getLogger().info("ç¢ºèªæª”æ¡ˆæ˜¯å¦å­˜åœ¨ï¼šä¸å­˜åœ¨ï¼Œå·²æ–°å¢ã€‚");
 
 			}
 

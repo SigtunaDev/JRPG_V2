@@ -24,7 +24,7 @@ public class GUI_Lock {
 
 		this.player = player;
 
-		inv = Bukkit.createInventory(null, 54, player.getName() + " ªº±K½XÂê");
+		inv = Bukkit.createInventory(null, 54, player.getName() + " çš„å¯†ç¢¼é–");
 		
 	}
 
@@ -56,7 +56,7 @@ public class GUI_Lock {
 		
 		ItemMeta meta = item.getItemMeta();
 		
-		meta.setDisplayName(ChatColor.WHITE + "¥Õ");
+		meta.setDisplayName(ChatColor.WHITE + "ç™½");
 		
 		item.setItemMeta(meta);
 		
@@ -84,9 +84,9 @@ public class GUI_Lock {
 		
 		ItemMeta meta = item.getItemMeta();
 		
-		meta.setDisplayName(ChatColor.AQUA + "ÅçÃÒ!");
+		meta.setDisplayName(ChatColor.AQUA + "é©—è­‰!");
 			
-		meta.setLore(Arrays.asList(ChatColor.RED + "½Ğª`·N¡A³Ì¦h¥u¯àµn¤J¥¢±Ñ¤T¦¸¡A­Y¶W¹L¤T¦¸±N·|­áµ²±b¸¹¡C",ChatColor.RED + "­Y§A©|¥¼µù¥U±K½X¡A«ö¤U¦¹ª««~§Y¥iµù¥U¡C"));
+		meta.setLore(Arrays.asList(ChatColor.RED + "è«‹æ³¨æ„ï¼Œæœ€å¤šåªèƒ½ç™»å…¥å¤±æ•—ä¸‰æ¬¡ï¼Œè‹¥è¶…éä¸‰æ¬¡å°‡æœƒå‡çµå¸³è™Ÿã€‚",ChatColor.RED + "è‹¥ä½ å°šæœªè¨»å†Šå¯†ç¢¼ï¼ŒæŒ‰ä¸‹æ­¤ç‰©å“å³å¯è¨»å†Šã€‚"));
 		
 		item.setItemMeta(meta);
 		

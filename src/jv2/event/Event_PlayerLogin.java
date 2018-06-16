@@ -39,7 +39,7 @@ public class Event_PlayerLogin implements Listener {
 	@EventHandler(priority = EventPriority.HIGH)
 	public void PlayerLogin(PlayerJoinEvent e) {
 
-		Player player = e.getPlayer();
+		final Player player = e.getPlayer();
 
 		Event_LockGUI.logged.put(player, false);
 
@@ -47,23 +47,23 @@ public class Event_PlayerLogin implements Listener {
 
 			anno.add(player);
 
-			// µù¥U¹w¼Ò¸ê®Æ
+			// è¨»å†Šé æ¨¡è³‡æ–™
 			Buffer_PlayerInfo.info.put(player, new PlayerInfo());
 			
 
 			player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 9999, 80));
 
-			player.sendMessage("Åwªï§r·s«iªÌ¡A¤£­n®`©È¶Â·t¡A§Ú¬O¶}µoªÌ6yaªº¯µ®Ñ¤p§Æ");
-			player.sendMessage("¶i¤J¹CÀ¸«e¡A¥ı§i¶D§Ú§A¥s¤°»ò¦W¤l§a!\n");
+			player.sendMessage("æ­¡è¿å‘€æ–°å‹‡è€…ï¼Œä¸è¦å®³æ€•é»‘æš—ï¼Œæˆ‘æ˜¯é–‹ç™¼è€…6yaçš„ç§˜æ›¸å°å¸Œ");
+			player.sendMessage("é€²å…¥éŠæˆ²å‰ï¼Œå…ˆå‘Šè¨´æˆ‘ä½ å«ä»€éº¼åå­å§!\n");
 
-			TextComponent tc = new TextComponent(ChatColor.GRAY + "ÂIÀ»§Ú¨Ó¿é¤J¦WºÙ!");
-			tc.setClickEvent(new ClickEvent(Action.SUGGEST_COMMAND, "/regname <½Ğ¿é¤J¦WºÙ>"));
+			TextComponent tc = new TextComponent(ChatColor.GRAY + "é»æ“Šæˆ‘ä¾†è¼¸å…¥åç¨±!");
+			tc.setClickEvent(new ClickEvent(Action.SUGGEST_COMMAND, "/regname <è«‹è¼¸å…¥åç¨±>"));
 
 			player.spigot().sendMessage(tc);
 
 		} else if (registered(player) == true) {
 
-			GUI_Lock gui = new GUI_Lock(player);
+			final GUI_Lock gui = new GUI_Lock(player);
 
 			new BukkitRunnable() {
 
@@ -122,16 +122,16 @@ public class Event_PlayerLogin implements Listener {
 
 		try {
 
-			// ¹B¦æ«ü¥O¡G¬d¸ßÄæ¦ì¬O§_¦³ª±®a¸ê®Æ
+			// é‹è¡ŒæŒ‡ä»¤ï¼šæŸ¥è©¢æ¬„ä½æ˜¯å¦æœ‰ç©å®¶è³‡æ–™
 			PreparedStatement state = connection.prepareStatement("select * from `jv2_player` where player = ?");
 
-			// ±N²Ä¤@­Ó°İ¸¹(°Ñ¼Æ)®M¤Jª±®a¦WºÙ
+			// å°‡ç¬¬ä¸€å€‹å•è™Ÿ(åƒæ•¸)å¥—å…¥ç©å®¶åç¨±
 			state.setString(1, player.getName());
 
-			// ¹B¦æ«ü¥O¡A»`¶°µ²ªG
+			// é‹è¡ŒæŒ‡ä»¤ï¼Œè’é›†çµæœ
 			ResultSet result = state.executeQuery();
 
-			// ¦pªGµ²ªG¦³¸ê®Æ¡A©w¸qboolean­Èfind¬°true
+			// å¦‚æœçµæœæœ‰è³‡æ–™ï¼Œå®šç¾©booleanå€¼findç‚ºtrue
 			if (result.next() == true)
 				find = true;
 

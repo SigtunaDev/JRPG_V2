@@ -44,7 +44,7 @@ public class Buffer_PlayerInfo {
 			
 		}
 		
-		player.kickPlayer("ÀÉ®×µù¥U¦¨¥\¡A½Ğ­«·sµn¤J :D");
+		player.kickPlayer("æª”æ¡ˆè¨»å†ŠæˆåŠŸï¼Œè«‹é‡æ–°ç™»å…¥ :D");
 
 	}
 

@@ -34,14 +34,14 @@ public class Command_regname implements CommandExecutor{
 		
 		if(name.length() > 10) {
 			
-			player.sendMessage("§Aªº¦W¤l¤ÓªøÅo¡A¦W¦r¤£¯à§C©ó¤Q­Ó¦r¡A´«­Ó¦W¤l§a!");
+			player.sendMessage("ä½ çš„åå­å¤ªé•·å›‰ï¼Œåå­—ä¸èƒ½ä½æ–¼åå€‹å­—ï¼Œæ›å€‹åå­å§!");
 			return false;
 			
 		}
 		
 		register_buffer(player,name);
 		
-		send_title(player,String.format(String.format("§A¦n! %s",name)),ChatColor.AQUA);
+		send_title(player,String.format(String.format("ä½ å¥½! %s",name)),ChatColor.AQUA);
 		
 		Lock_Register_Notice(player);
 		
@@ -64,10 +64,10 @@ public class Command_regname implements CommandExecutor{
 		
 		info.name = name;
 		
-		//§ó·s¸ê®Æ
+		//æ›´æ–°è³‡æ–™
 		Buffer_PlayerInfo.info.put(player, info);
 		
-		player.sendMessage("\n¼ÊºÙµù¥U§¹¦¨!");
+		player.sendMessage("\næš±ç¨±è¨»å†Šå®Œæˆ!");
 		
 	}
 	
@@ -75,10 +75,10 @@ public class Command_regname implements CommandExecutor{
 		
 		String name = Buffer_PlayerInfo.info.get(player).name;
 		
-		player.sendMessage(String.format("\n¶Ù¡A%s¡A±µ¤U¨Ó¡A¬°¤F«O»Ù±zªº±b¸¹¦w¥ş¡A½Ğµù¥U±K½XÂê!",name));
-		player.sendMessage("±K½XÂê«ÜÂ²³æ¡A¬O¥Ñ9®æÃC¦â©Ò²Õ¦¨¡A¤@­Ó¥i¥H´«¤TºØÃC¦â\n");
+		player.sendMessage(String.format("\nå—¨ï¼Œ%sï¼Œæ¥ä¸‹ä¾†ï¼Œç‚ºäº†ä¿éšœæ‚¨çš„å¸³è™Ÿå®‰å…¨ï¼Œè«‹è¨»å†Šå¯†ç¢¼é–!",name));
+		player.sendMessage("å¯†ç¢¼é–å¾ˆç°¡å–®ï¼Œæ˜¯ç”±9æ ¼é¡è‰²æ‰€çµ„æˆï¼Œä¸€å€‹å¯ä»¥æ›ä¸‰ç¨®é¡è‰²\n");
 		
-		TextComponent tc = new TextComponent(ChatColor.GRAY + "ÂIÀ»§Ú¨Ó³]©w±K½XÂê!");
+		TextComponent tc = new TextComponent(ChatColor.GRAY + "é»æ“Šæˆ‘ä¾†è¨­å®šå¯†ç¢¼é–!");
 		
 		tc.setClickEvent(new ClickEvent(Action.RUN_COMMAND,"/reglock"));
 		

@@ -33,13 +33,13 @@ public class Event_LockGUI implements Listener {
 	
 		Map<Integer,String> woolname = new HashMap<Integer,String>();
 		
-		woolname.put(0, ChatColor.WHITE + "¥Õ");
-		woolname.put(1, ChatColor.GOLD + "¾í");
-		woolname.put(4, ChatColor.YELLOW + "¶À");
+		woolname.put(0, ChatColor.WHITE + "ç™½");
+		woolname.put(1, ChatColor.GOLD + "æ©™");
+		woolname.put(4, ChatColor.YELLOW + "é»ƒ");
 		
 		Player player = (Player) e.getWhoClicked();
 		
-		if (!e.getInventory().getName().contains(" ªº±K½XÂê"))
+		if (!e.getInventory().getName().contains(" çš„å¯†ç¢¼é–"))
 			return;
 
 		e.setCancelled(true);
@@ -74,11 +74,11 @@ public class Event_LockGUI implements Listener {
 	@EventHandler
 	public void closeKick(InventoryCloseEvent e) {
 		
-		if(!e.getInventory().getName().contains("ªº±K½XÂê")) return;
+		if(!e.getInventory().getName().contains("çš„å¯†ç¢¼é–")) return;
 		
 		if(logged.get((Player)e.getPlayer()) == false) {
 			
-			((Player)e.getPlayer()).kickPlayer("½Ğµn¤J©Îµù¥U±K½X«á¦A¶i¤J¹CÀ¸¡C");
+			((Player)e.getPlayer()).kickPlayer("è«‹ç™»å…¥æˆ–è¨»å†Šå¯†ç¢¼å¾Œå†é€²å…¥éŠæˆ²ã€‚");
 			
 		}
 		
@@ -108,7 +108,7 @@ public class Event_LockGUI implements Listener {
 			
 			if(current.equals(password)) {
 				
-				player.sendMessage("ÅçÃÒ¦¨¥\¡C");
+				player.sendMessage("é©—è­‰æˆåŠŸã€‚");
 				
 				logged.put(player, true);
 				
@@ -116,7 +116,7 @@ public class Event_LockGUI implements Listener {
 				
 			}else {
 				
-				player.kickPlayer("±K½X¿ù»~¡A½Ğ­«·sµn¤J¡C");
+				player.kickPlayer("å¯†ç¢¼éŒ¯èª¤ï¼Œè«‹é‡æ–°ç™»å…¥ã€‚");
 				
 			}
 			
@@ -214,15 +214,15 @@ public class Event_LockGUI implements Listener {
 			
 			String name = meta.getDisplayName();
 			
-			if(name.contains("¥Õ") || name == null) {
+			if(name.contains("ç™½") || name == null) {
 				
 				str += "0";
 				
-			}else if(name.contains("¾í")){
+			}else if(name.contains("æ©™")){
 				
 				str += "1";
 				
-			}else if(name.contains("¶À")) {
+			}else if(name.contains("é»ƒ")) {
 				
 				str += "2";
 				
