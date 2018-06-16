@@ -1,3 +1,9 @@
-main: jv2.main.Main;
+main: jv2.main.Main
 name: JRPG_Project
 version: 0.2
+
+commands:
+    regname:
+        description: 註冊名稱
+    reglock:
+        description: 註冊密碼鎖
